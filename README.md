@@ -53,6 +53,12 @@ flowchart LR
 - Routing, geocoding/search, and map-tile integrations.
 - Production debugging of route state, camera behavior, overlays, and lifecycle edge cases on real Android hardware.
 
+## Verification evidence
+
+The private repository is a **Melos-managed Dart monorepo** with separate driver, passenger, and admin apps plus shared domain/data/realtime/geo/testing packages. Its database area includes **PostgreSQL + PostGIS schema, RLS policies, and pgTAP tests**, and geo services are explicitly separated into OSRM, Nominatim, and PMTiles components.
+
+Mobile behavior that depends on lifecycle timing, maps, overlays, or camera state is additionally validated on physical Android devices rather than treated as proven by static code or emulator-only inspection.
+
 ## Key engineering decisions
 
 ### The published route is the contract
@@ -72,7 +78,7 @@ Map camera behavior, lifecycle timing, and overlay interactions are validated on
 | Data | PostgreSQL, PostGIS, Supabase |
 | Realtime | Supabase-backed data flows |
 | Geo | OSRM, Nominatim, PMTiles |
-| Quality | Automated tests + physical-device verification |
+| Quality | pgTAP, automated tests, physical-device verification |
 
 ## What this demonstrates
 
