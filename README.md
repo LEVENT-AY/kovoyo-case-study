@@ -1,3 +1,7 @@
+![Kovoyo engineering case study cover](./assets/hero.svg)
+
+> **Visual overview:** conceptual case-study artwork based on the route, mobile, and realtime architecture. It does not represent live fleet or user data.
+
 # Kovoyo — Realtime Shared-Mobility Platform
 
 **Public engineering case study by [Levent Aydin](https://github.com/LEVENT-AY)**  
